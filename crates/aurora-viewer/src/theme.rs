@@ -39,32 +39,35 @@ impl Default for Theme {
     /// Brand colors from `scripts/aurora/brand.psd1`; window surfaces follow
     /// the shared hierarchy documented in `docs/BRANDING.md`.
     fn default() -> Self {
-        Theme {
-            violet: "#8B5CF6".into(),
-            indigo: "#4F46E5".into(),
-            teal: "#5EEAD4".into(),
-            navy: "#070B1F".into(),
-            panel: "#252830".into(),
-            bar: "#1B1E26".into(),
-            field: "#181B23".into(),
-            raised: "#363B47".into(),
-            violet_light: "#A78BFA".into(),
-            violet_pale: "#C4B5FD".into(),
-            ink: "#E8EDFB".into(),
-            muted: "#9AA6C6".into(),
-            muted_dim: "#6F7BA0".into(),
-            amber: "#FCD34D".into(),
-            rose: "#F472B6".into(),
-            danger: "#F87171".into(),
-            success: "#4ADE80".into(),
-            warn: "#FB923C".into(),
-            danger_dim: "#A85252".into(),
-            indigo_light: "#818CF8".into(),
-            on_accent: "#FFFFFF".into(),
-            panel_alpha: 230,
-            button_radius: 5,
-            window_radius: 3,
-            font_scale: 1.0,
+        
+Theme {
+    violet: "#990012".into(),
+    indigo: "#70000D".into(),
+    teal: "#D4AF37".into(),
+    navy: "#130608".into(),
+    panel: "#300A10".into(),
+    bar: "#210508".into(),
+    field: "#19080B".into(),
+    raised: "#54202A".into(),
+    violet_light: "#C92840".into(),
+    violet_pale: "#F0C86E".into(),
+    ink: "#FFF2DC".into(),
+    muted: "#D5B9A0".into(),
+    muted_dim: "#A88965".into(),
+    amber: "#F0C86E".into(),
+    rose: "#D51B36".into(),
+    danger: "#F87171".into(),
+    success: "#4ADE80".into(),
+    warn: "#FB923C".into(),
+    danger_dim: "#A85252".into(),
+    indigo_light: "#B5162A".into(),
+    on_accent: "#FFF2DC".into(),
+    panel_alpha: 230,
+    button_radius: 7,
+    window_radius: 6,
+    font_scale: 1.0,
+}
+
         }
     }
 }
