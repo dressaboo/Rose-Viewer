@@ -1,0 +1,36 @@
+
+name: Rose Viewer Windows Test Build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: rustup update stable
+
+      - name: Build viewer
+        run: cargo build --release --locked -p aurora-viewer --features xr-static-loader
+
+      - name: Prepare download
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path output
+          Copy-Item target/release/aurora-viewer.exe output/Rose-Viewer-Test.exe
+
+      - name: Upload Windows executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rose-Viewer-Windows-Test
+          path: output/Rose-Viewer-Test.exe
+          if-no-files-found: error
