@@ -34,7 +34,6 @@ pub struct Theme {
     pub window_radius: u8,
     pub font_scale: f32,
 }
-
 impl Default for Theme {
     /// Brand colors from `scripts/aurora/brand.psd1`; window surfaces follow
     /// the shared hierarchy documented in `docs/BRANDING.md`.
@@ -66,9 +65,7 @@ Theme {
     button_radius: 7,
     window_radius: 6,
     font_scale: 1.0,
-}
-
-        }
+         }
     }
 }
 
