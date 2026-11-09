@@ -11,7 +11,9 @@ name: CI
 # main alone (see rust-cache below) and a queue run cannot share its own.
 # The Linux job, which the queue skips for a change with nothing of Linux's
 # own (the platform-needed action), runs in full on main instead.
+
 on:
+  workflow_dispatch:
   pull_request:
   merge_group:
   push:
